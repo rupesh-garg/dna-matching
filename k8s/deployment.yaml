@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dna-matching
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dna-matching
+  template:
+    metadata:
+      labels:
+        app: dna-matching
+    spec:
+      containers:
+        - name: dna-matching
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
