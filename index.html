@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNA Alignment (Needleman-Wunsch)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>DNA Sequence Alignment Lab</h2>
+        
+        <div class="inputs">
+            <label>Sequence 1 (Top): <input type="text" id="seq1" value="GATTACA"></label>
+            <label>Sequence 2 (Side): <input type="text" id="seq2" value="GCATGCU"></label>
+            <button onclick="runAlgorithm()">Calculate Matrix</button>
+        </div>
+
+        <div id="matrix-container"></div> 
+    </div>
+
+    <script src="algorithm.js"></script>
+</body>
+</html>
